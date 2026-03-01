@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import *
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -34,9 +34,9 @@ def home():
         new_chat = "You: " + qts + "\nBot: " + msg
         chat = old_chat + "\n\n" + new_chat
 
-        return render_template("home.html", chat=chat.strip())
-
-    return render_template("home.html", chat="")
+        return render_template("home.html", msg=msg, chat=chat.strip())
+    else:  
+        return render_template("home.html", chat="")
 
 if __name__ == "__main__":
-    #app.run(debug=True)
+    #app.run(debug=True, use_reloader=True)
