@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prachi's Chatbot </title>
+    <style>
+        body { 
+            background: #ffe6f0; 
+            font-family: Arial; 
+            text-align: center; 
+        }
+        textarea {
+            width: 70%;
+            height: 300px;
+            border-radius: 10px;
+            padding: 10px;
+            resize: none;
+        }
+        input[type="text"] {
+            width: 50%;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            background: #ff4d88;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Prachi's Personal Chatbot </h1>
+
+<form method="POST">
+    <textarea name="chat" readonly>{{chat}}</textarea>
+    <br><br>
+    <input type="text" name="qts" placeholder="Ask something..." required>
+    <button type="submit">Send</button>
+</form>
+
+</body>
+</html>
